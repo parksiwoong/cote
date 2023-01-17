@@ -28,7 +28,7 @@ public class 아나그램 {
             map.put(x, map.getOrDefault(x, 0)+1);
         }
         for(char x : s2.toCharArray()){
-            //키가 존재하는지 보는거 ( !로 존재하지않을때 확인하는거
+            //키가 존재하는지 보는거 ( !로 존재하지않을때 확인하는거 그래서 존재하지않으면 NO 를 리턴해줌
             if(!map.containsKey(x) || map.get(x)==0) return "NO";
             map.put(x, map.get(x)-1);
         }
