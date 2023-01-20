@@ -31,7 +31,7 @@ public class 모든아나그램찾기 {
         }
         int lt=0;
         for(int rt = L; rt<a.length(); rt++){
-            am.put(a.charAt(rt), am.getOrDefault(a.charAt(lt), 0)+1);
+            am.put(a.charAt(rt), am.getOrDefault(a.charAt(rt), 0)+1);
             if(am.equals(bm)){answer++;}
             am.put(a.charAt(lt), am.remove(a.charAt(lt)));
             //0일땐 삭제
