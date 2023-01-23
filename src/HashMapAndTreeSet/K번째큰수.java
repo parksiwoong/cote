@@ -20,6 +20,7 @@ import java.util.TreeSet;
  * @출력예제: 143
  * */
 public class K번째큰수 {
+    /*정렬을 하기위한 트리셋 */
     public int solution(int[] arr, int n, int k){
         int answer = 0;
         //Collections.reverseOrder() 이게 없으면 오름차순이지만 이걸 쓰면 내림차순으로 자동정렬함
@@ -32,7 +33,12 @@ public class K번째큰수 {
             }
         }
         int cnt = 0;
+        //Tset.remove(143);
+        System.out.println(Tset.size()); //원소의 갯수
+        System.out.println(Tset.first()); //오름차순이면 최소값을 받고 내림차순이면 최대값을 받음 첫숫자 43
+        System.out.println(Tset.last()); //오름차순이면 최소값을 받고 내림차순이면 최대값을 받음 마지막 숫자 143
         for(int x : Tset){
+            System.out.println(x);//누가 지워진지 보려구
             cnt++;
             if(cnt==k) return answer;
             System.out.println(cnt+ " "+x);
