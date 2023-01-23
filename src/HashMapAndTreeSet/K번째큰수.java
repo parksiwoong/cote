@@ -21,7 +21,7 @@ import java.util.TreeSet;
  * */
 public class K번째큰수 {
     public int solution(int[] arr, int n, int k){
-        int answer;
+        int answer = 0;
         //Collections.reverseOrder() 이게 없으면 오름차순이지만 이걸 쓰면 내림차순으로 자동정렬함
         TreeSet<Integer> Tset = new TreeSet<>(Collections.reverseOrder());
         for(int i=0; i<n; i++){
@@ -31,7 +31,14 @@ public class K번째큰수 {
                 }
             }
         }
+        int cnt = 0;
+        for(int x : Tset){
+            cnt++;
+            if(cnt==k) return answer;
+            System.out.println(cnt+ " "+x);
+        }
         return answer;
+
     }
     public static void main(String[] args) {
         K번째큰수 T = new K번째큰수();
