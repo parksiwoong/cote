@@ -25,6 +25,7 @@ public class 괄호문자제거 {
                 while (stack.pop()!='(');
             }else stack.push(x);
         }
+        for(int i=0; i<stack.size(); i++) answer+= stack.get(i);
         return answer;
     }
     public static void main(String[] args) {
